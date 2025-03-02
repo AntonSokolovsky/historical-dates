@@ -9,9 +9,7 @@ export const baseTheme: ITheme = {
     accent2: '#EF5DA8',
     font: '#3877EE',
   },
-  //   typography: {
-  //     h1: {
-  //         fontFamily:
-  //     }
-  //   }
+  fonts: {
+    PTSans: 'PT Sans',
+  },
 };

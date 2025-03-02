@@ -8,4 +8,5 @@ export interface ButtonCircleProps
   borderStyle?: string;
   size?: string;
   stroke?: string;
+  rotate?: number;
 }

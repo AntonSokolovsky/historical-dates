@@ -8,6 +8,9 @@ export interface ITheme {
     bg: string;
     font: string;
   };
+  fonts: {
+    PTSans: string;
+  };
 
   //   media: {
   //     extraLarge: string;

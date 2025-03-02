@@ -13,6 +13,7 @@ export const ButtonCircle = styled.button<ButtonCircleProps>`
   border-style: ${(props) => props.borderStyle || 'solid'};
   border-color: ${(props) => props.borderColor || props.theme.colors.primary};
   border-radius: 50%;
+  transform: rotate(${(props) => props.rotate || 0}deg);
   cursor: pointer;
   transition: all 0.3s ease-in-out;
 

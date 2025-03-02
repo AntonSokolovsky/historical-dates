@@ -11,5 +11,8 @@ declare module 'styled-components' {
       accent2: string;
       font: string;
     };
+    fonts: {
+      PTSans: string;
+    };
   }
 }
