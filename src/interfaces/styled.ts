@@ -10,6 +10,7 @@ export interface ITheme {
   };
   fonts: {
     PTSans: string;
+    BebasNeue: string;
   };
 
   //   media: {

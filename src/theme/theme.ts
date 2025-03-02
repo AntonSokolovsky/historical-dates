@@ -11,5 +11,6 @@ export const baseTheme: ITheme = {
   },
   fonts: {
     PTSans: 'PT Sans',
+    BebasNeue: 'Bebas Neue',
   },
 };

@@ -1,20 +1,5 @@
 import styled from 'styled-components';
 
-export const Pagination = styled.div`
-  display: flex;
-`;
-
-export const PagesNumbers = styled.div`
-  width: 36px;
-  height: 18px;
-  color: ${({ theme }) => theme.palette.primary};
-  font-family: ${({ theme }) => theme.fonts.PTSans};
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-`;
-
 export const PaginationWrapper = styled.div`
   display: flex;
   flex-direction: column;

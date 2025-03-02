@@ -13,6 +13,7 @@ declare module 'styled-components' {
     };
     fonts: {
       PTSans: string;
+      BebasNeue: string;
     };
   }
 }

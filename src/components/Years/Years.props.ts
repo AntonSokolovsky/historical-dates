@@ -1,4 +1,4 @@
 export interface YearsProps {
-  yearFrom: string;
-  yearTo: string;
+  yearFrom: number;
+  yearTo: number;
 }
