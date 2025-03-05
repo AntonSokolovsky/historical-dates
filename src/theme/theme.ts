@@ -4,7 +4,7 @@ export const baseTheme: ITheme = {
   palette: {
     primary: '#42567A',
     secondary: '#5D5FEF',
-    bg: '#FFFFF',
+    bg: '#FFF',
     accent1: '#5D5FEF',
     accent2: '#EF5DA8',
     font: '#3877EE',

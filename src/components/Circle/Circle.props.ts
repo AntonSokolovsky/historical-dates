@@ -1,8 +1,6 @@
 import { ICategory } from '../../interfaces/IContent';
 
-export interface YearsProps {
-  yearFrom: number;
-  yearTo: number;
+export interface CircleProps {
   items: ICategory[];
   currentPage: number;
   onPageChange: (newPage: number) => void;

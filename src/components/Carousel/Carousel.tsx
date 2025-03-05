@@ -5,6 +5,7 @@ import * as S from './Carousel.style';
 import { Pagination } from '../Pagination';
 import { IContent } from '../../interfaces/IContent';
 import { Cards } from '../Cards';
+import { Line } from '../../Line';
 export function Carousel({ timeline }: IContent) {
   const [currentPage, setCurrentPage] = useState(1);
   const [currentFromYear, setCurrentFromYear] = useState(
@@ -26,8 +27,15 @@ export function Carousel({ timeline }: IContent) {
   };
   return (
     <S.Carousel>
+      <Line direction="vertical" />
       <Title />
-      <Years yearFrom={currentFromYear} yearTo={currentToYear} />
+      <Years
+        yearFrom={currentFromYear}
+        yearTo={currentToYear}
+        items={timeline}
+        currentPage={currentPage}
+        onPageChange={handlePageChange}
+      />
       <Pagination
         currentPage={currentPage}
         totalPages={totalPages}
