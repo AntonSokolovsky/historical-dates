@@ -10,6 +10,6 @@ export const Line = styled.div<LineProps>`
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  opacity: 0.2;
+  opacity: 0.1;
   z-index: -5;
 `;

@@ -6,4 +6,5 @@ export interface YearsProps {
   items: ICategory[];
   currentPage: number;
   onPageChange: (newPage: number) => void;
+  duration?: number;
 }
