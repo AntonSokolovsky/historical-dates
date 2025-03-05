@@ -15,5 +15,12 @@ declare module 'styled-components' {
       PTSans: string;
       BebasNeue: string;
     };
+    breakpoints: {
+      xs: string;
+      sm: string;
+      md: string;
+      lg: string;
+      xl: string;
+    };
   }
 }

@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { media } from '../../../theme/media';
 
 export const CardWrap = styled.div`
   display: flex;
@@ -18,10 +19,20 @@ export const CardTitle = styled.p`
 
 export const CardText = styled.p`
   width: 320px;
-  color: var(--Black-blue, #42567a);
+  color: ${({ theme }) => theme.palette.primary};
   font-family: 'PT Sans';
   font-size: 20px;
   font-style: normal;
   font-weight: 400;
   line-height: 30px;
+  ${media.xs} {
+    font-size: 14px;
+    line-height: 145%;
+    width: 166px;
+  }
+  ${media.sm} {
+    width: 320px;
+    font-size: 20px;
+    line-height: 30px;
+  }
 `;

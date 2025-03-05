@@ -9,4 +9,5 @@ export interface ButtonCircleProps
   size?: string;
   stroke?: string;
   rotate?: number;
+  position?: string;
 }
