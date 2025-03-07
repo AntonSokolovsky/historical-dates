@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { media } from '../../theme/media';
 
 export const CircleWrap = styled.div`
   display: flex;
@@ -6,6 +7,12 @@ export const CircleWrap = styled.div`
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  ${media.xs} {
+    display: none;
+  }
+  ${media.md} {
+    display: flex;
+  }
 `;
 
 export const Circle = styled.div`
@@ -34,7 +41,7 @@ export const ItemWrapper = styled.div<{
 
   &:hover {
     transform: ${({ angle }) =>
-      `rotate(${angle}deg) translate(265px) rotate(-${angle}deg) scale(1.2)`};
+      `rotate(${angle}deg) translate(265px) rotate(-${angle}deg)`};
   }
 `;
 export const ItemText = styled.span`

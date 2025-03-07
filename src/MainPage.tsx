@@ -8,7 +8,7 @@ export default function MainPage() {
   return (
     <ThemeProvider theme={baseTheme}>
       <GlobalStyles />
-      <Carousel timeline={TEXT.carousel.info} />;
+      <Carousel timeline={TEXT.carousel.info} />
     </ThemeProvider>
   );
 }

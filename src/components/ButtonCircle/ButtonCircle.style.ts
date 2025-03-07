@@ -17,6 +17,10 @@ export const ButtonCircle = styled.button<ButtonCircleProps>`
   cursor: pointer;
   transition: all 0.3s ease-in-out;
   position: ${(props) => props.position || 'relative'};
+  filter: ${(props) =>
+    props.shadow === 'true'
+      ? `drop-shadow(0px 0px 15px rgba(56, 119, 238, 0.1))`
+      : 'none'};
 
   &:hover {
     opacity: 0.8;

@@ -5,6 +5,7 @@ export const Cards = styled.div`
   display: flex;
   width: 1260px;
   justify-content: center;
+  min-width: 0;
 `;
 
 export const CardsWrap = styled.div`
@@ -12,7 +13,7 @@ export const CardsWrap = styled.div`
   align-items: center;
   justify-content: space-between;
   ${media.xs} {
-    margin: 20px 0 0 0;
+    margin: 0;
   }
   ${media.sm} {
     margin: 56px 40px 0 40px;

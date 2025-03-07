@@ -24,7 +24,11 @@ export function Circle({ items, currentPage, onPageChange }: CircleProps) {
           const isActive = index + 1 === currentPage;
           return (
             <>
-              <S.ItemWrapper key={index} angle={angle} isActive={isActive}>
+              <S.ItemWrapper
+                key={item.category}
+                angle={angle}
+                isActive={isActive}
+              >
                 <S.ItemCircle
                   isActive={isActive}
                   onClick={() => onPageChange(index + 1)}

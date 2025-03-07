@@ -3,7 +3,6 @@ import { CardsProps } from './Cards.props';
 import * as S from './Cards.style';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Swiper as SwiperType } from 'swiper/types';
-import { FreeMode } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/free-mode';
 import 'swiper/css/pagination';
@@ -45,35 +44,35 @@ export function Cards({ cards }: CardsProps) {
             borderStyle="none"
             size="40px"
             backgroundColor={'#FFF'}
-            shadow
+            shadow="true"
           >
             <ArrowIcon />
           </ButtonCircle>
         )}
         <S.Cards>
           <Swiper
-            width={isMobile ? 166 : 320}
-            // slidesPerView={3}
-            // breakpoints={{
-            //   320: {
-            //     slidesPerView: 1,
-            //   },
-            //   1200: {
-            //     slidesPerView: 2,
-            //   },
-            //   1600: {
-            //     slidesPerView: 3,
-            //   },
-            // }}
-            spaceBetween={isMobile ? 25 : 80}
+            watchOverflow
+            grabCursor
+            autoHeight={false}
             freeMode={true}
+            breakpoints={{
+              320: {
+                slidesPerView: 1.4,
+              },
+              568: {
+                slidesPerView: 2,
+              },
+              1600: {
+                slidesPerView: 3,
+              },
+            }}
+            spaceBetween={isMobile ? 25 : 80}
             onSwiper={(swiper) => {
               swiperRef.current = swiper;
               setIsBeginning(swiper.isBeginning);
               setIsEnd(swiper.isEnd);
             }}
             onSlideChange={handleSlideChange}
-            modules={[FreeMode]}
           >
             {cards.map((card) => (
               <SwiperSlide key={card.title}>
@@ -90,7 +89,7 @@ export function Cards({ cards }: CardsProps) {
             backgroundColor={'#FFF'}
             rotate={180}
             onClick={handleNext}
-            shadow
+            shadow="true"
           >
             <ArrowIcon />
           </ButtonCircle>

@@ -4,6 +4,8 @@ import { Circle } from '../Circle';
 import { YearsProps } from './Years.props';
 import * as S from './Years.style';
 import { useEffect, useRef, useState } from 'react';
+import { useTheme } from 'styled-components';
+import useMediaQuery from '../../hooks/useMediaQuery';
 
 export function Years({
   yearFrom,
@@ -17,6 +19,8 @@ export function Years({
   const toRef = useRef<HTMLSpanElement>(null);
   const [currentFrom, setCurrentFrom] = useState(yearFrom);
   const [currentTo, setCurrentTo] = useState(yearTo);
+  const theme = useTheme();
+  const isMobile = useMediaQuery(`(max-width: ${theme.breakpoints.sm})`);
 
   useEffect(() => {
     gsap.fromTo(
@@ -60,7 +64,7 @@ export function Years({
       />
       <S.FromYear ref={fromRef}>{currentFrom}</S.FromYear>
       <S.ToYear ref={toRef}>{currentTo}</S.ToYear>
-      <Line direction="horizontal" />
+      {!isMobile && <Line direction="horizontal" />}
     </S.Years>
   );
 }

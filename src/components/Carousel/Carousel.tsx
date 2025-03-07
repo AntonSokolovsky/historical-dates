@@ -6,6 +6,8 @@ import { Pagination } from '../Pagination';
 import { IContent } from '../../interfaces/IContent';
 import { Cards } from '../Cards';
 import { Line } from '../../Line';
+import { useTheme } from 'styled-components';
+import useMediaQuery from '../../hooks/useMediaQuery';
 export function Carousel({ timeline }: IContent) {
   const [currentPage, setCurrentPage] = useState(1);
   const [currentFromYear, setCurrentFromYear] = useState(
@@ -19,6 +21,9 @@ export function Carousel({ timeline }: IContent) {
     timeline[currentPage - 1].cards
   );
 
+  const theme = useTheme();
+  const isMobile = useMediaQuery(`(max-width: ${theme.breakpoints.sm})`);
+
   const handlePageChange = (newPage: number) => {
     setCurrentPage(newPage);
     setCurrentFromYear(timeline[currentPage - 1].fromYear);
@@ -27,7 +32,8 @@ export function Carousel({ timeline }: IContent) {
   };
   return (
     <S.Carousel>
-      <Line direction="vertical" />
+      {!isMobile && <Line direction="vertical" />}
+      {isMobile && <Line direction="horizontal" />}
       <Title />
       <Years
         yearFrom={currentFromYear}
@@ -36,12 +42,21 @@ export function Carousel({ timeline }: IContent) {
         currentPage={currentPage}
         onPageChange={handlePageChange}
       />
-      <Pagination
-        currentPage={currentPage}
-        totalPages={totalPages}
-        onPageChange={handlePageChange}
-      />
+      {!isMobile && (
+        <Pagination
+          currentPage={currentPage}
+          totalPages={totalPages}
+          onPageChange={handlePageChange}
+        />
+      )}
       <Cards cards={currentCards} />
+      {isMobile && (
+        <Pagination
+          currentPage={currentPage}
+          totalPages={totalPages}
+          onPageChange={handlePageChange}
+        />
+      )}
     </S.Carousel>
   );
 }
