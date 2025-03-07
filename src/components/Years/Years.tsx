@@ -1,5 +1,5 @@
 import gsap from 'gsap';
-import { Line } from '../../Line';
+import { Line } from '../Line';
 import { Circle } from '../Circle';
 import { YearsProps } from './Years.props';
 import * as S from './Years.style';

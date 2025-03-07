@@ -5,7 +5,7 @@ import * as S from './Carousel.style';
 import { Pagination } from '../Pagination';
 import { IContent } from '../../interfaces/IContent';
 import { Cards } from '../Cards';
-import { Line } from '../../Line';
+import { Line } from '../Line';
 import { useTheme } from 'styled-components';
 import useMediaQuery from '../../hooks/useMediaQuery';
 export function Carousel({ timeline }: IContent) {

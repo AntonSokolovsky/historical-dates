@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { LineProps } from './Line.props';
-import { media } from '../theme/media';
+import { media } from '../../theme/media';
 
 export const Line = styled.div<LineProps>`
   border: 1px solid;
